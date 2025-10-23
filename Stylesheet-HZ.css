@@ -3,6 +3,7 @@
     --Main-bg: #ededed;
     --TopBot: #4c8f96;
     --TL: #1c2136;
+    --Highlight: #387a82;
 }
 
 /*Global styles*/
@@ -10,6 +11,10 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+}
+
+body{
+    background-color: var(--Main-bg);
 }
 
 /*Nav*/
@@ -21,13 +26,13 @@
 
     &>h1 {
         background-color: var(--TL);
-        width: 20%;
+        width: 15%;
         text-align: center;
         color: white;
-        height: 70px;
+        height: 80px;
         padding-top: 15px;
         position: absolute;
-        left: 4%;
+        left: 10%;
         bottom: -5%;
     }
 
@@ -36,8 +41,9 @@
         display: flex;
         flex-direction: row;
         width: 75%;
-        justify-content: center;
         justify-self: right;
+        justify-content: right;
+        margin-right: 125px;
 
         &>li {
             background-color: var(--TL);
@@ -59,6 +65,7 @@
             a:hover {
                 opacity: 0.7;
                 cursor: pointer;
+                background-color: gray;
             }
         }
     }
@@ -78,26 +85,23 @@
 
     &>:nth-child(1) {
         width: 40%;
-        background-color: #1c2136;
         height: auto;
 
         &>img {
             object-fit: contain;
             width: 100%;
+            height: 100%;
         }
     }
 
     &>:nth-child(2) {
-        background-color: rebeccapurple;
+        background-color: white;
         width: 60%;
         height: inherit;
         text-align: center;
         font-size: large;
         position: relative;
-        &>h2{(2) h3
-            position: relative;
-            top: 40%;
-        }
+        padding-top: 175px;
     }
 }
 
@@ -113,15 +117,17 @@
     justify-content: space-evenly;
     justify-self: center;
 
-    &>div div:nth-child(2){
+    &>div div:nth-child(2) {
         margin-top: 15px;
     }
 
     &>div {
         width: 20%;
+
         &>div:nth-child(1) {
             border: 4px #4c8f96 solid;
             height: 60%;
+
             /**Add shadow here at somepoint*/
             &>img {
                 object-fit: fill;
@@ -134,4 +140,103 @@
 
 /*bot div*/
 
+.Flex-mess {
+    width: 80%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    justify-self: center;
+    margin-top: 60px;
+
+    &>:nth-child(1){
+        width: 45%;
+        height: 100%;
+        background-color: white;
+        justify-self: left;
+        border: 4px var(--Highlight) solid;
+    }
+
+    &>:nth-child(2) {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+
+        &>:nth-child(1) {
+            width: 100%;
+            height: 40%;
+            margin-bottom: 10px;
+            background-color: var(--TopBot);
+            border: 4px var(--Highlight) solid;
+
+        }
+
+        &>:nth-child(2){
+            width: 100%;
+            height: 40%;
+            background-color: var(--TopBot);
+            border: 4px var(--Highlight) solid;
+            display: flex;
+            flex-direction: row;
+
+            &>p{
+                color: white;
+                width: 50%;
+                text-align: center;
+                padding-top: 60px;
+                
+                &>a{
+                    display: inline;
+                    text-decoration: none;
+                    font-weight: bolder;
+                    color: white;
+                }
+            }
+
+            &>img{
+                object-fit: contain;
+                height: 100%;
+                width: 40%;
+            }
+        }
+
+    }
+}
+
+
 /*Footer*/
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: var(--TopBot);
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+
+    &>:nth-child(1) {
+    padding-right: 150px;
+    margin-left: 600px;
+    padding-top: 40px;
+    color: white;
+}
+
+    &>:nth-child(2) {
+        background-color: var(--Highlight);
+        width: 12.5%;
+        height: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        &>img {
+            width: 20%;
+            object-fit: contain;
+            height: 60%;
+            margin-top: 10px;
+            padding: 6px;
+        }
+    }
+}
