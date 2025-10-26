@@ -1,0 +1,60 @@
+.curved-drop-shadow::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to left, #222 50%, #ccc);
+    width: 60%;
+    height: 60%;
+    transform: skewY(-8.5deg);
+    transform-origin: right;
+    bottom: 15px;
+    left: 18px;
+    border-radius: 10px;
+    filter: blur(5px);
+}
+
+.curved-drop-shadow::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right, #222 50%, #ccc);
+    width: 60%;
+    height: 60%;
+    transform: skewY(8.5deg);
+    transform-origin: left;
+    bottom: 15px;
+    right: 18px;
+    border-radius: 10px;
+    filter: blur(5px);
+    opacity: 0.5;
+    /* You can adjust this value */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+}
+
+.card-content {
+    position: relative;
+    background: #fff;
+    width: 450px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    /* completed rgba value */
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 10px;
+
+}
+
+.card-content .card-img {
+    width: 450px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
